@@ -25,7 +25,7 @@
  * Release version. Leave the Marlin version or apply a custom scheme.
  */
 #ifndef SHORT_BUILD_VERSION
-  #define SHORT_BUILD_VERSION "bugfix-2.1.x"
+#define SHORT_BUILD_VERSION "2.1.5"
 #endif
 
 /**
@@ -33,7 +33,7 @@
  * vendor name, download location, GitHub account, etc.
  */
 #ifndef DETAILED_BUILD_VERSION
-  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
+#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
 #endif
 
 /**
@@ -42,7 +42,7 @@
  * version was tagged.
  */
 #ifndef STRING_DISTRIBUTION_DATE
-  #define STRING_DISTRIBUTION_DATE "2025-04-05"
+#define STRING_DISTRIBUTION_DATE "2025-04-05"
 #endif
 
 /**
@@ -54,10 +54,10 @@
 
 #define MARLIN_HEX_VERSION 02010300
 #ifndef REQUIRED_CONFIGURATION_H_VERSION
-  #define REQUIRED_CONFIGURATION_H_VERSION MARLIN_HEX_VERSION
+#define REQUIRED_CONFIGURATION_H_VERSION MARLIN_HEX_VERSION
 #endif
 #ifndef REQUIRED_CONFIGURATION_ADV_H_VERSION
-  #define REQUIRED_CONFIGURATION_ADV_H_VERSION MARLIN_HEX_VERSION
+#define REQUIRED_CONFIGURATION_ADV_H_VERSION MARLIN_HEX_VERSION
 #endif
 
 /**
@@ -66,14 +66,14 @@
  * (Other behaviors are given by the firmware version and capabilities report.)
  */
 #ifndef PROTOCOL_VERSION
-  #define PROTOCOL_VERSION "1.0"
+#define PROTOCOL_VERSION "1.0"
 #endif
 
 /**
  * Define a generic printer name to be output to the LCD after booting Marlin.
  */
 #ifndef MACHINE_NAME
-  #define MACHINE_NAME "3D Printer"
+#define MACHINE_NAME "3D Printer"
 #endif
 
 /**
@@ -82,22 +82,22 @@
  * providing the source code to your customers.)
  */
 #ifndef SOURCE_CODE_URL
-  #define SOURCE_CODE_URL "github.com/MarlinFirmware/Marlin"
+#define SOURCE_CODE_URL "github.com/MarlinFirmware/Marlin"
 #endif
 
 /**
  * Default generic printer UUID.
  */
 #ifndef DEFAULT_MACHINE_UUID
-  #define DEFAULT_MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff"
+#define DEFAULT_MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff"
 #endif
 
-  /**
-   * The WEBSITE_URL is the location where users can get more information such as
-   * documentation about a specific Marlin release. Displayed in the Info Menu.
-   */
+/**
+ * The WEBSITE_URL is the location where users can get more information such as
+ * documentation about a specific Marlin release. Displayed in the Info Menu.
+ */
 #ifndef WEBSITE_URL
-  #define WEBSITE_URL "marlinfw.org"
+#define WEBSITE_URL "ricardopaschoali.tec.br"
 #endif
 
 /**
@@ -105,18 +105,18 @@
  * Currently only supported by DUE platform.
  */
 #ifndef USB_DEVICE_VENDOR_ID
-  #define USB_DEVICE_VENDOR_ID            0x03EB /* ATMEL VID */
+#define USB_DEVICE_VENDOR_ID 0x03EB /* ATMEL VID */
 #endif
 #ifndef USB_DEVICE_PRODUCT_ID
-  #define USB_DEVICE_PRODUCT_ID           0x2424 /* MSC / CDC */
+#define USB_DEVICE_PRODUCT_ID 0x2424 /* MSC / CDC */
 #endif
 //! USB Device string definitions (Optional)
 #ifndef USB_DEVICE_MANUFACTURE_NAME
-  #define USB_DEVICE_MANUFACTURE_NAME     WEBSITE_URL
+#define USB_DEVICE_MANUFACTURE_NAME WEBSITE_URL
 #endif
 #ifdef CUSTOM_MACHINE_NAME
-  #define USB_DEVICE_PRODUCT_NAME         CUSTOM_MACHINE_NAME
+#define USB_DEVICE_PRODUCT_NAME CUSTOM_MACHINE_NAME
 #else
-  #define USB_DEVICE_PRODUCT_NAME         MACHINE_NAME
+#define USB_DEVICE_PRODUCT_NAME MACHINE_NAME
 #endif
-#define USB_DEVICE_SERIAL_NAME            "123985739853"
+#define USB_DEVICE_SERIAL_NAME "123985739853"
