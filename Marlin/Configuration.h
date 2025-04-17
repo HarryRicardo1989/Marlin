@@ -152,14 +152,14 @@
  *          TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-#define X_DRIVER_TYPE TMC2208 // Ricardo
-#define Y_DRIVER_TYPE TMC2208 // Ricardo
-#define Z_DRIVER_TYPE TMC2208 // Ricardo
+#define X_DRIVER_TYPE TMC2209 // Ricardo
+#define Y_DRIVER_TYPE TMC2209 // Ricardo
+#define Z_DRIVER_TYPE TMC2209 // Ricardo
 // #define X2_DRIVER_TYPE A4988
 // #define Y2_DRIVER_TYPE A4988
 // #define Z2_DRIVER_TYPE A4988
 // #define Z3_DRIVER_TYPE A4988
-#define E0_DRIVER_TYPE TMC2208 // Ricardo
+#define E0_DRIVER_TYPE TMC2209 // Ricardo
 // #define E1_DRIVER_TYPE A4988
 // #define E2_DRIVER_TYPE A4988
 // #define E3_DRIVER_TYPE A4988
@@ -1285,7 +1285,8 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 // #define DEFAULT_AXIS_STEPS_PER_UNIT {1280, 1280, 51200, 2304} // Ricardo
-#define DEFAULT_AXIS_STEPS_PER_UNIT {80, 80, 3200, 141} // Ricardo 16steps
+// #define DEFAULT_AXIS_STEPS_PER_UNIT {80, 80, 3200, 141} // Ricardo 16steps
+#define DEFAULT_AXIS_STEPS_PER_UNIT {160, 160, 3200, 141} // Ricardo X/Y = 32, Z=16 E0 =16
 /**
  * Enable support for M92. Disable to save at least ~530 bytes of flash.
  */
@@ -1296,7 +1297,8 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE {350, 350, 3, 30} // Ricardo
+#define DEFAULT_MAX_FEEDRATE {600, 600, 8, 30} // Ricardo
+// #define DEFAULT_MAX_FEEDRATE {400, 400, 5, 30} // Ricardo
 
 // #define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1643,7 +1645,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET {10, 10, -1.25} // Ricardo
+#define NOZZLE_TO_PROBE_OFFSET {10, 10, -1.2} // Ricardo
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 1

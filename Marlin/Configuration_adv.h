@@ -3009,10 +3009,10 @@
  */
 #define INTERPOLATE true // Ricardo
 
-#if AXIS_IS_TMC_CONFIG(X)              // Ricardo
-#define X_CURRENT 900                  // (mA) RMS current. Multiply by 1.414 for peak current.
-#define X_CURRENT_HOME X_CURRENT - 200 // (mA) RMS current for homing. (Typically lower than *_CURRENT.)
-#define X_MICROSTEPS 16                // 0..256
+#if AXIS_IS_TMC_CONFIG(X)        // Ricardo
+#define X_CURRENT 1000           // (mA) RMS current. Multiply by 1.414 for peak current.
+#define X_CURRENT_HOME X_CURRENT // (mA) RMS current for homing. (Typically lower than *_CURRENT.)
+#define X_MICROSTEPS 32          // 0..256
 #define X_RSENSE 0.11
 #define X_CHAIN_POS -1        // -1..0: Not chained. 1: MCU MOSI connected. 2: Next in chain, ...
 #define X_INTERPOLATE true    // Enable to override 'INTERPOLATE' for the X axis
@@ -3030,9 +3030,9 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(Y) // Ricardo
-#define Y_CURRENT 900
-#define Y_CURRENT_HOME Y_CURRENT - 200
-#define Y_MICROSTEPS 16
+#define Y_CURRENT 1000
+#define Y_CURRENT_HOME Y_CURRENT
+#define Y_MICROSTEPS 32
 #define Y_RSENSE 0.11
 #define Y_CHAIN_POS -1
 #define Y_INTERPOLATE true
@@ -3050,7 +3050,7 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(Z) // Ricardo
-#define Z_CURRENT 1800
+#define Z_CURRENT 2000
 #define Z_CURRENT_HOME Z_CURRENT
 #define Z_MICROSTEPS 16
 #define Z_RSENSE 0.11
@@ -3061,7 +3061,7 @@
 
 #if AXIS_IS_TMC_CONFIG(Z2)
 #define Z2_CURRENT Z_CURRENT
-#define Z2_CURRENT_HOME Z_CURRENT_HOME - 200
+#define Z2_CURRENT_HOME Z_CURRENT_HOME
 #define Z2_MICROSTEPS Z_MICROSTEPS
 #define Z2_RSENSE Z_RSENSE
 #define Z2_CHAIN_POS -1
@@ -3071,7 +3071,7 @@
 
 #if AXIS_IS_TMC_CONFIG(Z3)
 #define Z3_CURRENT Z_CURRENT
-#define Z3_CURRENT_HOME Z_CURRENT_HOME - 200
+#define Z3_CURRENT_HOME Z_CURRENT_HOME
 #define Z3_MICROSTEPS Z_MICROSTEPS
 #define Z3_RSENSE Z_RSENSE
 #define Z3_CHAIN_POS -1
@@ -3081,7 +3081,7 @@
 
 #if AXIS_IS_TMC_CONFIG(Z4)
 #define Z4_CURRENT Z_CURRENT
-#define Z4_CURRENT_HOME Z_CURRENT_HOME - 200
+#define Z4_CURRENT_HOME Z_CURRENT_HOME
 #define Z4_MICROSTEPS Z_MICROSTEPS
 #define Z4_RSENSE Z_RSENSE
 #define Z4_CHAIN_POS -1
@@ -3090,9 +3090,9 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(I)
-#define I_CURRENT 900
+#define I_CURRENT 1000
 #define I_CURRENT_HOME I_CURRENT
-#define I_MICROSTEPS 16
+#define I_MICROSTEPS 64
 #define I_RSENSE 0.11
 #define I_CHAIN_POS -1
 // #define I_INTERPOLATE  true
@@ -3100,9 +3100,9 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(J)
-#define J_CURRENT 900
+#define J_CURRENT 1000
 #define J_CURRENT_HOME J_CURRENT
-#define J_MICROSTEPS 16
+#define J_MICROSTEPS 64
 #define J_RSENSE 0.11
 #define J_CHAIN_POS -1
 // #define J_INTERPOLATE  true
@@ -3110,9 +3110,9 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(K)
-#define K_CURRENT 900
+#define K_CURRENT 1000
 #define K_CURRENT_HOME K_CURRENT
-#define K_MICROSTEPS 16
+#define K_MICROSTEPS 64
 #define K_RSENSE 0.11
 #define K_CHAIN_POS -1
 // #define K_INTERPOLATE  true
@@ -3120,7 +3120,7 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(U)
-#define U_CURRENT 900
+#define U_CURRENT 1000
 #define U_CURRENT_HOME U_CURRENT
 #define U_MICROSTEPS 8
 #define U_RSENSE 0.11
@@ -3130,7 +3130,7 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(V)
-#define V_CURRENT 900
+#define V_CURRENT 1000
 #define V_CURRENT_HOME V_CURRENT
 #define V_MICROSTEPS 8
 #define V_RSENSE 0.11
@@ -3140,7 +3140,7 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(W)
-#define W_CURRENT 900
+#define W_CURRENT 1000
 #define W_CURRENT_HOME W_CURRENT
 #define W_MICROSTEPS 8
 #define W_RSENSE 0.11
@@ -3150,7 +3150,7 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(E0) // Ricardo
-#define E0_CURRENT 900
+#define E0_CURRENT 800
 #define E0_MICROSTEPS 16
 #define E0_RSENSE 0.11
 #define E0_CHAIN_POS -1
@@ -3324,13 +3324,13 @@
 #if HAS_STEALTHCHOP
 #define STEALTHCHOP_XY
 #define STEALTHCHOP_Z
-#define STEALTHCHOP_I
-#define STEALTHCHOP_J
-#define STEALTHCHOP_K
-#define STEALTHCHOP_U
-#define STEALTHCHOP_V
-#define STEALTHCHOP_W
-#define STEALTHCHOP_E
+// #define STEALTHCHOP_I
+// #define STEALTHCHOP_J
+// #define STEALTHCHOP_K
+// #define STEALTHCHOP_U
+// #define STEALTHCHOP_V
+// #define STEALTHCHOP_W
+// #define STEALTHCHOP_E
 #endif
 
 /**
