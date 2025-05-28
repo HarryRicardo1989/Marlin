@@ -62,7 +62,7 @@
 
 // Author info of this build printed to the host during boot and M115
 #define STRING_CONFIG_H_AUTHOR "(Ricardo Paschoali)" // Ricardo // Who made the changes.
-// #define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
+#define CUSTOM_VERSION_FILE Version.h                // Path from the root directory (no quotes)
 
 // @section machine
 
@@ -1297,7 +1297,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE {600, 600, 8, 30} // Ricardo
+#define DEFAULT_MAX_FEEDRATE {350, 350, 4, 30} // Ricardo
 // #define DEFAULT_MAX_FEEDRATE {400, 400, 5, 30} // Ricardo
 
 // #define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -1311,7 +1311,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION {2000, 2000, 20, 10000} // Ricardo
+#define DEFAULT_MAX_ACCELERATION {2000, 2000, 10, 10000} // Ricardo
 
 // #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1645,7 +1645,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET {10, 10, -1.2} // Ricardo
+#define NOZZLE_TO_PROBE_OFFSET {10, 10, -1.43} // Ricardo
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 1
@@ -1811,14 +1811,14 @@
 
 // @section extruder
 
-#define DISABLE_E                    // Ricardo           // Disable the extruder when not stepping
+// #define DISABLE_E                    // Ricardo           // Disable the extruder when not stepping
 #define DISABLE_OTHER_EXTRUDERS true // Ricardo  // Keep only the active extruder enabled
 
 // @section motion
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
-#define INVERT_Y_DIR false
+#define INVERT_Y_DIR true
 #define INVERT_Z_DIR true
 // #define INVERT_I_DIR false
 // #define INVERT_J_DIR false
@@ -1889,11 +1889,11 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 195 // Ricardo
-#define Y_BED_SIZE 195 // Ricardo
+#define X_BED_SIZE 220 // Ricardo
+#define Y_BED_SIZE 220 // Ricardo
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS -10 // Ricardo
+#define X_MIN_POS -15 // Ricardo
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
@@ -2330,8 +2330,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS -20
-#define MANUAL_Y_HOME_POS 0
+#define MANUAL_X_HOME_POS -17 // Ricardo
+#define MANUAL_Y_HOME_POS -2  // Ricardo
 // #define MANUAL_Z_HOME_POS 0
 // #define MANUAL_I_HOME_POS 0
 // #define MANUAL_J_HOME_POS 0

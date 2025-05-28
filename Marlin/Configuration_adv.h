@@ -2999,7 +2999,7 @@
  */
 #if HAS_TRINAMIC_CONFIG
 
-#define HOLD_MULTIPLIER 0.7 // Scales down the holding current from run current
+#define HOLD_MULTIPLIER 0.8 // Scales down the holding current from run current
 
 // #define EDITABLE_HOMING_CURRENT   // Add a G-code and menu to modify the Homing Current
 
@@ -3150,12 +3150,12 @@
 #endif
 
 #if AXIS_IS_TMC_CONFIG(E0) // Ricardo
-#define E0_CURRENT 800
+#define E0_CURRENT 1000
 #define E0_MICROSTEPS 16
 #define E0_RSENSE 0.11
 #define E0_CHAIN_POS -1
 #define E0_INTERPOLATE true
-#define E0_HOLD_MULTIPLIER 0.7
+#define E0_HOLD_MULTIPLIER 1
 #endif
 
 #if AXIS_IS_TMC_CONFIG(E1)
