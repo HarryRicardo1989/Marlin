@@ -936,8 +936,8 @@
 #define HOMING_BUMP_MM {5, 5, 2}      // (linear=mm, rotational=°) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR {2, 2, 4} // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 
-// #define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (linear=mm, rotational=°) Backoff from endstops after homing
-// #define XY_COUNTERPART_BACKOFF_MM 0         // (mm) Backoff X after homing Y, and vice-versa
+// #define HOMING_BACKOFF_POST_MM {0, 0, 5} // (linear=mm, rotational=°) Backoff from endstops after homing
+//  #define XY_COUNTERPART_BACKOFF_MM 0         // (mm) Backoff X after homing Y, and vice-versa
 
 // #define QUICK_HOME                          // If G28 contains XY do a diagonal move first
 // #define HOME_Y_BEFORE_X                     // If G28 contains XY home Y before X
@@ -2420,6 +2420,10 @@
 // #define MESH_MIN_Y MESH_INSET
 // #define MESH_MAX_X X_BED_SIZE - (MESH_INSET)
 // #define MESH_MAX_Y Y_BED_SIZE - (MESH_INSET)
+#define MESH_MIN_X 20  // igual ao seu offset X
+#define MESH_MIN_Y 15  // igual ao seu offset Y
+#define MESH_MAX_X 200 // 220 - offset X
+#define MESH_MAX_Y 205 // 220 - offset Y
 #endif
 
 #if ALL(AUTO_BED_LEVELING_UBL, EEPROM_SETTINGS)
